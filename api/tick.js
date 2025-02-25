@@ -9,7 +9,7 @@ export default class Tick {
         try {
             let token;
             for (const setting of settings) {
-                if (setting.label === 'vercel token') {
+                if (setting.label.toLowerCase() === 'vercel token') {
                     token = setting.default
                 }
             }
@@ -20,9 +20,9 @@ export default class Tick {
                 bearerToken: token
             });
             const vercel_data = await vercel.projects.getProjects({});
-            let projectDetails ="";//[]
+            let projectDetails ="";
             for (const project of vercel_data.projects) {
-                let deployment = "";//[]
+                let deployment = "";
                 for (const dep of project.latestDeployments) {
                     deployment+=`
                     Created At: ${new Date(dep.createdAt).toLocaleString()},

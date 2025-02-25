@@ -17,8 +17,9 @@ export const integration = (req, res) => {
       "integration_type": "interval",
       "is_active": true,
       "key_features": [
-        "Latest performance data.",
-        "Latest Deployments Details.",
+       "Extract recent deployed project detail on vercel.",
+        "Send notification to Telex Channel.",
+        "Easy to install"
       ],
     //   "permissions": {
     //     "monitoring_user": {
